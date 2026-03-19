@@ -1,0 +1,1 @@
+gci "$env:USERPROFILE\Downloads\*.pdf"|?{$_.LastWriteTime -gt (Get-Date).AddHours(-48)}|Compress-Archive -Destination "$env:USERPROFILE\DocumentsPDF_Backup.zip" -Force
