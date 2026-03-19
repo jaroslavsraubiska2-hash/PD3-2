@@ -1,0 +1,1 @@
+$s=Get-MpComputerStatus;$r=100;if(!$s.RealTimeProtectionEnabled){$r-=50};if($s.AntiVirusSignatureAge-gt3){$r-=20};if($s.QuickScanAge-gt7){$r-=20};"Sistemas drosibas reitings: $r / 100"
