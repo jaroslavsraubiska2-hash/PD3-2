@@ -1,4 +1,1 @@
-$doc = [Environment]::GetFolderPath("MyDocuments")
-$processes = Get-Process | Where-Object {$_.WorkingSet -gt 50MB -and $_.Name -ne"msedge"} \ Select Name, Id, WorkingSet
-
-if ($processes)
+gps | ?($_.WS -gt 150MB -and $_.Name -ne"msedge") | select Name,Id,WS | export-csv "$env:USERPROFILE/Documents\LielieProcesi.csv" -NoType

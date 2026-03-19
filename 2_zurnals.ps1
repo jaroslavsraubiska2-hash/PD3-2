@@ -1,0 +1,2 @@
+$f="$env:USERPROFILE\Documents\Warnings.txt";$e=Get-EventLog Application -EntryType Warning -After (Get-Date).AddDays(-3)
+$e>$f;"`nTOP3">>$f;$e|group Source|sort Count -desc|select -f 3|%{"$($_.Name)-$($_.Count)"}>>$f
