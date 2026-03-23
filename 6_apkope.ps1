@@ -1,0 +1,1 @@
+$f="$env:USERPROFILE\Documents\Servisi.log";$d=Get-Date;"Spooler","wuauserv"|%{Add-Content $f "$d Serviss $_ ir $((Get-Service $_).Status)."}
