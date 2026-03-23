@@ -1,0 +1,1 @@
+"Sistema ir instaletas $((winget list --source msstore).Count-1) aplikacijas no Microsoft Store."
